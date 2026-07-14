@@ -1,0 +1,7 @@
+D:\practiceexample\anonymous\anonymous\bin\Debug\anonymous.exe.config
+D:\practiceexample\anonymous\anonymous\bin\Debug\anonymous.exe
+D:\practiceexample\anonymous\anonymous\bin\Debug\anonymous.pdb
+D:\practiceexample\anonymous\anonymous\obj\Debug\anonymous.csproj.AssemblyReference.cache
+D:\practiceexample\anonymous\anonymous\obj\Debug\anonymous.csproj.CoreCompileInputs.cache
+D:\practiceexample\anonymous\anonymous\obj\Debug\anonymous.exe
+D:\practiceexample\anonymous\anonymous\obj\Debug\anonymous.pdb

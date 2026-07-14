@@ -1,0 +1,7 @@
+D:\practiceexample\thread\thread\bin\Debug\thread.exe.config
+D:\practiceexample\thread\thread\bin\Debug\thread.exe
+D:\practiceexample\thread\thread\bin\Debug\thread.pdb
+D:\practiceexample\thread\thread\obj\Debug\thread.csproj.AssemblyReference.cache
+D:\practiceexample\thread\thread\obj\Debug\thread.csproj.CoreCompileInputs.cache
+D:\practiceexample\thread\thread\obj\Debug\thread.exe
+D:\practiceexample\thread\thread\obj\Debug\thread.pdb

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\practiceexample\\anonymous\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B8A56E8-4B03-4941-9CF0-4F107854A109}|anonymous\\anonymous.csproj|d:\\practiceexample\\anonymous\\anonymous\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8A56E8-4B03-4941-9CF0-4F107854A109}|anonymous\\anonymous.csproj|solutionrelative:anonymous\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\practiceexample\\anonymous\\anonymous\\Program.cs",
+              "RelativeDocumentMoniker": "anonymous\\Program.cs",
+              "ToolTip": "D:\\practiceexample\\anonymous\\anonymous\\Program.cs",
+              "RelativeToolTip": "anonymous\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T08:00:34.086Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

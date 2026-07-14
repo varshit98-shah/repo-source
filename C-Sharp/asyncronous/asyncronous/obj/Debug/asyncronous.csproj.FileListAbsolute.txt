@@ -1,0 +1,7 @@
+D:\practiceexample\asyncronous\asyncronous\bin\Debug\asyncronous.exe.config
+D:\practiceexample\asyncronous\asyncronous\bin\Debug\asyncronous.exe
+D:\practiceexample\asyncronous\asyncronous\bin\Debug\asyncronous.pdb
+D:\practiceexample\asyncronous\asyncronous\obj\Debug\asyncronous.csproj.AssemblyReference.cache
+D:\practiceexample\asyncronous\asyncronous\obj\Debug\asyncronous.csproj.CoreCompileInputs.cache
+D:\practiceexample\asyncronous\asyncronous\obj\Debug\asyncronous.exe
+D:\practiceexample\asyncronous\asyncronous\obj\Debug\asyncronous.pdb
