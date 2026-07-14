@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Name :{{name()}}</h1>
+    <input type="text" name="" id="" [value]="name()" (input)="name.set($event.target.value)">
+
+    <hr>
+
+    <h2>Age: {{age}}</h2>
+    <!-- this is the simple version of exposing ng model  -->
+    <!-- <input type="text" name="" id="" [(ngModel)]="age"> -->
+
+    <!-- this is the streached version of ng model exposing  -->
+    <input type="number" name="" id="" [ngModel]="age" (ngModelChange)="age=$event">
+
+    <hr>
+    <h2>Name: {{users().name}}</h2>
+    <input type="text" name="" id="" [value]="users().name" (input)="change('name',$event.target.value)">
+
+    <hr>
+    <h2>Age: {{users().age}}</h2>
+    <input type="number" name="" id="" [value]="users().age" (input)="change('age',$event.target.value)">
+
+    <hr>
+    <h2>Email: {{users().email}}</h2>
+    <input type="text" name="" id="" [value]="users().email" (input)="change('email',$event.target.value)">
+
+
+    <hr>
+
+    <h1>Name: {{name1}}</h1>
+    <input type="text" [(ngModel)]="name1">
+
+    <hr>
+
+    <h1>Name: {{objemail}}</h1>
+    <input type="text" [(ngModel)]="objemail">
+</div>

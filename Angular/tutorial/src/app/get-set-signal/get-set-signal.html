@@ -1,0 +1,15 @@
+<div class="container">
+    <p class="value-text">Value: {{ defaultvalue() }}</p>
+
+    <div class="input-group">
+        <input
+            type="text"
+            [value]="defaultvalue()"
+            (input)="setvalue($event.target.value)"
+        />
+
+        <button (click)="defaultvalue2()">
+            Default Value
+        </button>
+    </div>
+</div>

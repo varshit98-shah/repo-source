@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+
+:host:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin: 0 0 12px 0;
+}
+
+button {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:first-of-type {
+  background: #4f8ef7;
+  color: #fff;
+}
+
+button:first-of-type:hover {
+  background: #2d6fe0;
+}
+
+button:last-of-type {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+button:last-of-type:hover {
+  background: #d9363e;
+}

@@ -1,0 +1,49 @@
+.button-card {
+    width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.button-card button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.button-card button:hover {
+    transform: translateY(-2px);
+}
+
+.increment-btn {
+    background: #22c55e;
+}
+
+.increment-btn:hover {
+    background: #16a34a;
+}
+
+.reset-btn {
+    background: #f59e0b;
+}
+
+.reset-btn:hover {
+    background: #d97706;
+}
+
+.decrement-btn {
+    background: #ef4444;
+}
+
+.decrement-btn:hover {
+    background: #dc2626;
+}

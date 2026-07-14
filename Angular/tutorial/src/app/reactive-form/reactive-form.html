@@ -1,0 +1,20 @@
+<h2>Reactive Form Example</h2>
+<input type="text" [formControl]="email" placeholder="Enter email">
+<br><br>
+<input type="text" [formControl]="password" placeholder="Enter Password">
+<br>
+<button (click)="Submit()">Submit</button>
+
+<hr>
+<br>
+<form [formGroup]="loginform" (ngSubmit)="submitform()" method="post">
+<input type="text" formControlName="name" placeholder="Enter Name">
+<br>
+<br>
+<input type="email" formControlName="email" placeholder="Enter Email">
+<br>
+<br>
+<input type="password" formControlName="password" placeholder="Enter Password">
+<br>
+<button>submit</button>
+</form>

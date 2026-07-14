@@ -1,0 +1,53 @@
+<!-- <h1>{{getName(10,10)}}</h1> -->
+
+<!-- Events Binding -->
+<!-- <app-events-binding></app-events-binding> -->
+
+<!-- Data Types -->
+<!-- <app-datatypes></app-datatypes> -->
+
+<!-- Property Binding -->
+<!-- <app-property-binding></app-property-binding> -->
+
+<!-- Signals -->
+<!-- <app-signals-p></app-signals-p>
+  <app-signal-effect></app-signal-effect> -->
+<!-- <app-signal-datatypes></app-signal-datatypes> -->
+<!-- <app-counter-app-signal></app-counter-app-signal> -->
+<!-- <app-get-set-signal></app-get-set-signal> -->
+<!-- <app-control-statement></app-control-statement> -->
+<!-- <app-two-way-binding></app-two-way-binding> -->
+<!-- <app-to-do-list></app-to-do-list> -->
+<!-- <app-inline-demo></app-inline-demo> -->
+
+<!-- Parent to child data passing and child to parent data passing un comment the css if you want to see  -->
+<!-- <h3>Name:-{{ selectname() }}</h3>
+<div class="input-row">
+  <input
+    type="text"
+    (input)="newuser.set($event.target.value)"
+    placeholder="Enter new name"
+    [value]="newuser()"
+  />
+  <button (click)="AddUser()">Add User</button>
+</div>
+@for (user of userarray(); track user) {
+  <app-child-componenet
+    [name]="user"
+    (getstudentname)="selecteduser($event)"
+    (deletenames)="deletename($event)"
+  >
+  </app-child-componenet>
+} -->
+
+<!-- global signal using display and handle count -->
+<!-- <app-display-count></app-display-count>
+<app-handle-count></app-handle-count> -->
+
+<!-- Pipes Example  -->
+<!-- <app-pipes-example></app-pipes-example> -->
+<!-- <app-custom-pipe-implementation></app-custom-pipe-implementation> -->
+<app-header-component></app-header-component>
+
+<router-outlet></router-outlet>
+<!-- <app-reactive-form></app-reactive-form> -->

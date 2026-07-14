@@ -1,0 +1,19 @@
+<p>home works!</p>
+<a routerLink="/profile"
+[queryParams]="{id:data().id,name:data().name,age:data().age}">Go to Profile</a>
+<br>
+<br>
+<button (click)="goprofile()">Go to Profile</button>
+<br>
+<br>
+<button (click)="goprofilequery()">Go to Profile Query</button>
+<hr>
+<a routerLink="/about/nikhil">Go to About us </a>
+<br>
+<a [routerLink]="['/about',data().name,data().age]">Go to About us </a>
+<br>
+<button (click)="goabout()">Go to About us</button>
+<br>
+<br>
+<button (click)="containerexample()">Show all users</button>
+<ng-container #container></ng-container>

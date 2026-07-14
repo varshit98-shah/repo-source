@@ -1,0 +1,32 @@
+<h3>Name:-{{ namme1() | titlecase }}</h3>
+<input type="text" (input)="namme1.set($event.target.value)" />
+<hr />
+
+<!-- date with parameters and without parameters -->
+<h3>{{ date() | date }}</h3>
+<h3>{{ date() | date: 'mm' }}</h3>
+<h3>{{ date() | date: 'yy' }}</h3>
+<h3>{{ date() | date: 'dd' }}</h3>
+
+<hr />
+<!-- curreny example with currency sting at the end -->
+<h3>{{ price | currency }}</h3>
+<h3>{{ price | currency: 'EUR' }}</h3>
+
+<hr />
+<h3>{{ names() | json }}</h3>
+
+<hr />
+
+@for (student of students(); track student.id) {
+  <div>
+    <div>
+      <h3>Name:-{{ student.name | uppercase }}</h3>
+      <h3>Title Case:-{{ student.name | titlecase }}</h3>
+    </div>
+  </div>
+  <h3>email:-{{ student.email | lowercase }}</h3>
+  <h3>currency:-{{student.courseFee| currency:'INR'}}</h3>
+  <h3>Date:-{{student.joiningDate|date:'dd-MMM-yyyy'}}</h3>
+  <h3>Percentage:-{{student.percentage|percent}}</h3>
+}

@@ -1,0 +1,132 @@
+<div class="container">
+
+    <h1>Control Statement</h1>
+
+    <div class="section">
+
+        @if (islogin()) {
+            <h2>Welcome User</h2>
+            <button class="logout-btn" (click)="handlelogin(false)">
+                Logout
+            </button>
+        } @else {
+            <h2>Login</h2>
+            <button class="login-btn" (click)="handlelogin(true)">
+                Login
+            </button>
+        }
+
+    </div>
+
+    <hr>
+
+    <div class="section toggle-section">
+
+        <h2>Toggle</h2>
+
+        @if(showbtn()){
+            <button class="toggle-btn" (click)="showbtn.set(false)">
+                Hide
+            </button>
+        } @else {
+            <button class="toggle-btn" (click)="showbtn.set(true)">
+                Show
+            </button>
+        }
+
+    </div>
+
+    <hr>
+
+    <div class="section">
+
+        <h2>Status</h2>
+
+        <select (change)="handleOption($event)">
+            <option value="not started">Not Started</option>
+            <option value="in progress">In Progress</option>
+            <option value="completed">Completed</option>
+            <option value="error">Error</option>
+        </select>
+
+        @if(status() == "not started"){
+            <p class="status-box not-started">
+                Not Started
+            </p>
+        }
+        @else if(status() == "in progress"){
+            <p class="status-box in-progress">
+                In Progress
+            </p>
+        }
+        @else if(status() == "completed"){
+            <p class="status-box completed">
+                Completed
+            </p>
+        }
+        @else{
+            <p class="status-box error">
+                Error
+            </p>
+        }
+
+    </div>
+
+</div>
+
+<hr/>
+
+<div class ="container">
+    @for (user of users(); track user) {
+        <li>{{ user }}</li>
+    }
+    <div class="user-detail-list">
+        @for(user of usersdetail(); track user.id){
+            <li [style.background-color] = "$even?'#ccc':'#fff'">{{$index+1}} {{user.Name + " " + user.Email}}
+                @if($first){<span>Admin</span>}
+                @if($last){<span>Last</span>}
+            </li>
+            <span>@if($count == $index+1){<b>total</b>:{{$count}}}</span>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <select  (click)="change($event)" id="">
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Invalid">Invalid</option>
+    </select>
+
+    @switch (days()) {
+        @case('Sunday'){
+            <p>Today is Sunday</p>
+        }
+         @case('Monday'){
+            <p>Today is Monday</p>
+        }
+         @case('Tuesday'){
+            <p>Today is Tuesday</p>
+        }
+         @case('Wednesday'){
+            <p>Today is Wednesday</p>
+        }
+         @case('Thursday'){
+            <p>Today is Thursday</p>
+        }
+         @case('Friday'){
+            <p>Today is Friday</p>
+        }
+         @case('Saturday'){
+            <p>Today is Saturday</p>
+        }
+        @default{
+            <p>Today is not a valid day</p>
+        }
+    }
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>To Do List</h1>
+    <div class="input-group">
+        <input type="text" [value]="title()" (input)="title.set($event.target.value)">
+        <button (click)="AddTask()">Add Task</button>
+    </div>
+    <ul>
+        @for(task of task(); track task.id){
+        <li>
+            <div class="task-info"><span class="task-number">{{$index+1}}</span>
+                <span>{{task.Title}}</span>
+            </div>
+            <button class="remove-btn" (click)="removetask(task.id)">Remove</button>
+        </li>
+        }
+        @empty{
+            <li>No tasks available</li>
+        }
+    </ul>
+</div>
