@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\bin\Debug\foreachloop.03.exe.config
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\bin\Debug\foreachloop.03.exe
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\bin\Debug\foreachloop.03.pdb
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\obj\Debug\foreachloop.03.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\obj\Debug\foreachloop.03.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\obj\Debug\foreachloop.03.exe
+C:\Users\Admin\source\repos\foreachloop.03\foreachloop.03\obj\Debug\foreachloop.03.pdb

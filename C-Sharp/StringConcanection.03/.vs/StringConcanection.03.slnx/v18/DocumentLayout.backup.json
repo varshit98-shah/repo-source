@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\StringConcanection.03\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD0FF1C-B14F-4D35-82B7-5E82F3A1C947}|StringConcanection.03\\StringConcanection.03.csproj|c:\\users\\admin\\source\\repos\\stringconcanection.03\\stringconcanection.03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD0FF1C-B14F-4D35-82B7-5E82F3A1C947}|StringConcanection.03\\StringConcanection.03.csproj|solutionrelative:stringconcanection.03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\StringConcanection.03\\StringConcanection.03\\Program.cs",
+              "RelativeDocumentMoniker": "StringConcanection.03\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\StringConcanection.03\\StringConcanection.03\\Program.cs*",
+              "RelativeToolTip": "StringConcanection.03\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T10:58:32.417Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

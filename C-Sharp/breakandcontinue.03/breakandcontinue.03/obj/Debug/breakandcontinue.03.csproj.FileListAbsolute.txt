@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\bin\Debug\breakandcontinue.03.exe.config
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\bin\Debug\breakandcontinue.03.exe
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\bin\Debug\breakandcontinue.03.pdb
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\obj\Debug\breakandcontinue.03.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\obj\Debug\breakandcontinue.03.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\obj\Debug\breakandcontinue.03.exe
+C:\Users\Admin\source\repos\breakandcontinue.03\breakandcontinue.03\obj\Debug\breakandcontinue.03.pdb

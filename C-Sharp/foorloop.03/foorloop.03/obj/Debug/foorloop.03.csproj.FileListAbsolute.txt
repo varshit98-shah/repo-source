@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\bin\Debug\foorloop.03.exe.config
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\bin\Debug\foorloop.03.exe
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\bin\Debug\foorloop.03.pdb
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\obj\Debug\foorloop.03.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\obj\Debug\foorloop.03.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\obj\Debug\foorloop.03.exe
+C:\Users\Admin\source\repos\foorloop.03\foorloop.03\obj\Debug\foorloop.03.pdb

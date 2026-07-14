@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\String.03cs\String.03cs\bin\Debug\String.03cs.exe.config
+C:\Users\Admin\source\repos\String.03cs\String.03cs\bin\Debug\String.03cs.exe
+C:\Users\Admin\source\repos\String.03cs\String.03cs\bin\Debug\String.03cs.pdb
+C:\Users\Admin\source\repos\String.03cs\String.03cs\obj\Debug\String.03cs.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\String.03cs\String.03cs\obj\Debug\String.03cs.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\String.03cs\String.03cs\obj\Debug\String.03cs.exe
+C:\Users\Admin\source\repos\String.03cs\String.03cs\obj\Debug\String.03cs.pdb
