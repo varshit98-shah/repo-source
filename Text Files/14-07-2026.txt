@@ -1,0 +1,88 @@
+*SortedList<TKey, TValue> 
+-SortedList<TKey, TValue> is a generic collection that stores data as key-value pairs.
+-Namespace: System.Collections.Generic
+-Keys are automatically stored in sorted order (ascending by default).
+-Each key must be unique; duplicate keys are not allowed.
+-Values can be duplicated.
+-Provides access using both key and index.
+-Uses an array-based internal structure.
+-Maintains elements in sorted order automatically after insertion.
+-Faster searching by key using binary search.
+-Key cannot be null.
+
+
+*Delegates — Method References
+-A delegate is a type-safe reference to a method.
+-Delegates are similar to function pointers in C/C++.
+-Used to pass methods as parameters and call methods dynamically.
+-A delegate can reference:
+   -Instance methods
+   -Static methods
+   -Anonymous methods
+   -Lambda expressions
+-Defined using the delegate keyword.
+
+
+*Events — Publisher-Subscriber Pattern 
+-Event is a C# feature used for object communication and notifications.
+-Based on delegates and follows the Publisher-Subscriber pattern.
+-Publisher → Raises the event and sends notifications.
+-Subscriber → Handles the event by registering a method.
+-Provides loose coupling between objects.
+-Declared using the event keyword.
+-Subscribe using += and unsubscribe using -=.
+-Uses event handlers (EventHandler, EventHandler<T>).
+-Supports multiple subscribers.
+-Commonly used in UI events, notifications, and callbacks.
+-Only the class that declares the event can raise it.
+
+
+*Lambda Expressions — Anonymous Functions
+-Lambda expressions are anonymous functions (methods without a name).
+-Introduced to write short and readable code.
+-Uses the => (lambda) operator.
+-Commonly used with delegates, LINQ, and collections.
+-Can take parameters and return values.
+
+
+*Nullable Types — Handling Null Values 
+-Allows value types to store null.
+-Declared using ? (e.g., int? age).
+-Used for optional or missing values.
+-Common with database NULL values.
+-Check value using HasValue and Value.
+-Use ?? to assign default values.
+-Use ?. for safe null access.
+-Helps prevent null-related errors.
+
+
+*Async/Await — Asynchronous Programming 
+-Used for asynchronous programming in C#.
+-Allows tasks to run without blocking the main thread.
+-Improves application responsiveness and performance.
+-async keyword is used to define asynchronous methods.
+-await keyword waits for a task to complete without blocking.
+-Works with Task and Task<T>.
+-Commonly used for:
+-File operations
+-Database calls
+-Web/API requests
+-Helps handle long-running operations efficiently.
+-Makes asynchronous code easier to read and maintain.
+
+
+Multithreading — Parallel Execution (C#) Key Points
+Allows multiple threads to execute tasks simultaneously.
+Improves application performance and responsiveness.
+A thread is a small unit of execution within a process.
+Used for performing multiple operations at the same time.
+Implemented using:
+   -Thread class
+   -Task Parallel Library (TPL)
+   -Parallel class
+Helps utilize multiple CPU cores efficiently.
+Commonly used for:
+   -Background tasks
+   -Data processing
+   -File operations
+Requires proper synchronization to avoid data conflicts.
