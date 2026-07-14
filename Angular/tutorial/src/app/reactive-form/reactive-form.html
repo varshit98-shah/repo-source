@@ -9,12 +9,27 @@
 <br>
 <form [formGroup]="loginform" (ngSubmit)="submitform()" method="post">
 <input type="text" formControlName="name" placeholder="Enter Name">
+@if(name?.hasError('required')&& name?.touched){
+    <span>This Input Field is Required</span>
+}
 <br>
 <br>
 <input type="email" formControlName="email" placeholder="Enter Email">
+@if(email1?.hasError('required')&& email1?.touched){
+    <span>This Email Field is Required</span>
+}
+@if(email1?.errors?.['email']&& email1?.touched){
+    <span>This is not a valid email </span>
+}
 <br>
 <br>
 <input type="password" formControlName="password" placeholder="Enter Password">
+@if(password1?.hasError('required')&& password1?.touched){
+    <span>The Password Field is Required</span>
+}
+@if(password1?.errors?.['minlength']&& password1?.touched){
+    <span>The Password Length should be minimum 6 characters</span>
+}
 <br>
-<button>submit</button>
+<button [disabled]="loginform.invalid">submit</button>
 </form>

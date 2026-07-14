@@ -20,11 +20,15 @@ import { CustomPipeImplementation } from './custom-pipe-implementation/custom-pi
 import { HeaderComponent } from './header-component/header-component';
 import { ContainerExampleUser } from './pages/container-example-user/container-example-user';
 import { ReactiveForm } from './reactive-form/reactive-form';
+import { SignalForm } from './signal-form/signal-form';
+import { TemplateDrivenForm } from './template-driven-form/template-driven-form';
+import { Login } from './auth/pages/login/login';
 
 
 @Component({
   selector: 'app-root',
-  imports: [EventsBinding,Datatypes,PropertyBinding,SignalsP,SignalEffect,SignalDatatypes,CounterAppSignal,GetSetSignal,ControlStatement,TwoWayBinding,ToDoList,InlineDemo,ChildComponenet,DisplayCount,HandleCount,PipesExample,CustomPipeImplementation,RouterOutlet,HeaderComponent,ContainerExampleUser,ReactiveForm],
+  imports: [EventsBinding,Datatypes,PropertyBinding,SignalsP,SignalEffect,SignalDatatypes,CounterAppSignal,GetSetSignal,ControlStatement,TwoWayBinding,ToDoList,InlineDemo,ChildComponenet,DisplayCount,HandleCount,PipesExample,CustomPipeImplementation,RouterOutlet,HeaderComponent,ContainerExampleUser,
+    ReactiveForm,SignalForm,TemplateDrivenForm,Login],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
