@@ -1,0 +1,649 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\meet1\\source\\repos\\RoleBase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\repoimplementations\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\repoimplementations\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\permissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\permissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\interface\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\interface\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\middleware\\permissionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\middleware\\permissionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\attributes\\requirepermissionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\attributes\\requirepermissionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\model\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\model\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\model\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\model\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\model\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\model\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\repoimplementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\repoimplementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\repoimplementations\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\repoimplementations\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\updatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\updatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\interface\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\interface\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\repoimplementations\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\repoimplementations\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\repositories\\interface\\ipermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\repositories\\interface\\ipermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\rolebase.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\rolebase.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\assignpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\assignpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\dtos\\assignroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\dtos\\assignroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\rolebase.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\rolebase.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\migrations\\20260709123526_fchangee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\migrations\\20260709123526_fchangee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\migrations\\20260709122910_fchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\migrations\\20260709122910_fchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\migrations\\20260709083728_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\migrations\\20260709083728_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|c:\\users\\meet1\\source\\repos\\rolebase\\rolebase\\migrations\\20260710100823_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{738C0F4B-2866-9A3A-B37B-F1BC1019378E}|RoleBase\\RoleBase.csproj|solutionrelative:rolebase\\migrations\\20260710100823_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\User.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\User.cs",
+              "RelativeToolTip": "RoleBase\\Model\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:29:34.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\UserRole.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Model\\UserRole.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\UserRole.cs",
+              "RelativeToolTip": "RoleBase\\Model\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:37:54.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\UserController.cs",
+              "RelativeToolTip": "RoleBase\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T06:11:33.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Program.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Program.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Program.cs*",
+              "RelativeToolTip": "RoleBase\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T07:44:58.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PermissionDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\PermissionDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\PermissionDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\PermissionDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\PermissionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T08:47:24.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\RepoImplementations\\AuthRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\AuthRepository.cs*",
+              "RelativeToolTip": "RoleBase\\Repositories\\RepoImplementations\\AuthRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T08:37:55.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RoleBase\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T12:15:08.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\Interface\\IAuthRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IAuthRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\Interface\\IAuthRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T09:15:34.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Services\\JwtService.cs",
+              "RelativeToolTip": "RoleBase\\Services\\JwtService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T10:40:40.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RolePermission.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\RolePermission.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Model\\RolePermission.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\RolePermission.cs",
+              "RelativeToolTip": "RoleBase\\Model\\RolePermission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:39:01.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Permission.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\Permission.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Model\\Permission.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\Permission.cs",
+              "RelativeToolTip": "RoleBase\\Model\\Permission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:36:26.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PermissionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Middleware\\PermissionMiddleware.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Middleware\\PermissionMiddleware.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Middleware\\PermissionMiddleware.cs",
+              "RelativeToolTip": "RoleBase\\Middleware\\PermissionMiddleware.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T11:43:02.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RequirePermissionAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Attributes\\RequirePermissionAttribute.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Attributes\\RequirePermissionAttribute.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Attributes\\RequirePermissionAttribute.cs",
+              "RelativeToolTip": "RoleBase\\Attributes\\RequirePermissionAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T11:25:01.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\RepoImplementations\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\UserRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\RepoImplementations\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T09:19:32.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\Interface\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IUserRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\Interface\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T08:54:37.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PermissionController.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\PermissionController.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Controllers\\PermissionController.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\PermissionController.cs",
+              "RelativeToolTip": "RoleBase\\Controllers\\PermissionController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T04:57:42.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "RoleBase\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T04:57:14.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\Role.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Model\\Role.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Model\\Role.cs",
+              "RelativeToolTip": "RoleBase\\Model\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:31:26.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\RepoImplementations\\RoleRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\RoleRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\RepoImplementations\\RoleRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwEAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T04:47:08.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\UpdateDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\UpdateDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\UpdateDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\UpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T07:08:44.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T08:43:05.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\RoleDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\RoleDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\RoleDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\RoleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T08:46:20.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IRoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IRoleRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\Interface\\IRoleRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IRoleRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\Interface\\IRoleRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAjwBEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T09:06:42.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PermissionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\PermissionRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\RepoImplementations\\PermissionRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\RepoImplementations\\PermissionRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\RepoImplementations\\PermissionRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA1wDAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T09:55:50.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T08:45:18.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20260709083728_First.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260709083728_First.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Migrations\\20260709083728_First.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260709083728_First.cs",
+              "RelativeToolTip": "RoleBase\\Migrations\\20260709083728_First.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T08:37:28.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IPermissionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IPermissionRepository.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Repositories\\Interface\\IPermissionRepository.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Repositories\\Interface\\IPermissionRepository.cs",
+              "RelativeToolTip": "RoleBase\\Repositories\\Interface\\IPermissionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T09:12:21.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "RoleBase\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:49:39.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RoleBase.csproj",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\RoleBase.csproj",
+              "RelativeDocumentMoniker": "RoleBase\\RoleBase.csproj",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\RoleBase.csproj",
+              "RelativeToolTip": "RoleBase\\RoleBase.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwBkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-09T06:49:12.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "20260710100823_Second.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260710100823_Second.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Migrations\\20260710100823_Second.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260710100823_Second.cs",
+              "RelativeToolTip": "RoleBase\\Migrations\\20260710100823_Second.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T10:08:23.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AssignPermissionDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\AssignPermissionDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\AssignPermissionDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\AssignPermissionDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\AssignPermissionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:03:47.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RoleBase\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RoleBase\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-09T08:35:32.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AssignRoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\AssignRoleDto.cs",
+              "RelativeDocumentMoniker": "RoleBase\\DTOs\\AssignRoleDto.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\DTOs\\AssignRoleDto.cs",
+              "RelativeToolTip": "RoleBase\\DTOs\\AssignRoleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T04:43:00.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\appsettings.json",
+              "RelativeDocumentMoniker": "RoleBase\\appsettings.json",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\appsettings.json",
+              "RelativeToolTip": "RoleBase\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-09T08:27:58.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RoleBase.http",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\RoleBase.http",
+              "RelativeDocumentMoniker": "RoleBase\\RoleBase.http",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\RoleBase.http",
+              "RelativeToolTip": "RoleBase\\RoleBase.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-07-10T08:05:31.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20260709123526_FChangee.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260709123526_FChangee.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Migrations\\20260709123526_FChangee.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260709123526_FChangee.cs",
+              "RelativeToolTip": "RoleBase\\Migrations\\20260709123526_FChangee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T12:35:26.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20260709122910_FChange.cs",
+              "DocumentMoniker": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260709122910_FChange.cs",
+              "RelativeDocumentMoniker": "RoleBase\\Migrations\\20260709122910_FChange.cs",
+              "ToolTip": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\Migrations\\20260709122910_FChange.cs",
+              "RelativeToolTip": "RoleBase\\Migrations\\20260709122910_FChange.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T12:29:10.696Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
