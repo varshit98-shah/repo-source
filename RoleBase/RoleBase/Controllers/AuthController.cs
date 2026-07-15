@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RoleBase.Data;
 using RoleBase.DTOs;
@@ -6,6 +7,7 @@ using RoleBase.Repositories.Interface;
 namespace RoleBase.Controllers
 {
     [ApiController]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {

@@ -3655,11 +3655,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\RoleBase.csproj",
+      "projectUniqueName": "C:\\Users\\meet1\\OneDrive\\Desktop\\Git\\repo-source\\RoleBase\\RoleBase\\RoleBase.csproj",
       "projectName": "RoleBase",
-      "projectPath": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\RoleBase.csproj",
+      "projectPath": "C:\\Users\\meet1\\OneDrive\\Desktop\\Git\\repo-source\\RoleBase\\RoleBase\\RoleBase.csproj",
       "packagesPath": "C:\\Users\\meet1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\meet1\\source\\repos\\RoleBase\\RoleBase\\obj\\",
+      "outputPath": "C:\\Users\\meet1\\OneDrive\\Desktop\\Git\\repo-source\\RoleBase\\RoleBase\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

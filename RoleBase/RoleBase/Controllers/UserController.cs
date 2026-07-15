@@ -9,7 +9,7 @@ using RoleBase.Repositories.RepoImplementations;
 
 namespace RoleBase.Controllers
 {
-   // [Authorize(Roles="Admin")]
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class UserController : ControllerBase    
@@ -40,7 +40,7 @@ namespace RoleBase.Controllers
             return Ok(all);
         }
         [HttpDelete("{id}")]
-        [RequirePermission("Delete")]
+       // [RequirePermission("Delete")]
         public async Task<IActionResult> Delete(int id)
         {
             var result =  await _userRepository.DeleteAsync(id);

@@ -52,11 +52,34 @@ namespace RoleBase.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ApiPermissions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    HttpMethod = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PermissionId = table.Column<int>(type: "int", nullable: false),
+                    ApiPath = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ApiPermissions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ApiPermissions_Permissions_PermissionId",
+                        column: x => x.PermissionId,
+                        principalTable: "Permissions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "RolePermissions",
                 columns: table => new
                 {
                     RoleId = table.Column<int>(type: "int", nullable: false),
-                    PermissionId = table.Column<int>(type: "int", nullable: false)
+                    PermissionId = table.Column<int>(type: "int", nullable: false),
+                    PermissionName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoleName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -100,6 +123,11 @@ namespace RoleBase.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_ApiPermissions_PermissionId",
+                table: "ApiPermissions",
+                column: "PermissionId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RolePermissions_PermissionId",
                 table: "RolePermissions",
                 column: "PermissionId");
@@ -113,6 +141,9 @@ namespace RoleBase.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ApiPermissions");
+
             migrationBuilder.DropTable(
                 name: "RolePermissions");
 

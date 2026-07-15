@@ -48,16 +48,17 @@ namespace RoleBase.Repositories.RepoImplementations
         }
         public async Task CreateAsync(RegisterDto dto)
         {
+            var hashPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password);
             var user = new User
             {
                 Name = dto.Name,
-                Password = dto.Password,
+                Password = hashPassword,
                 Email = dto.Email
             };
              _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            var UserRole = _context.Roles.FirstOrDefault(x => x.RoleName == "User");
+            var UserRole = _context.Roles.FirstOrDefault(x => x.RoleName == "Student");
 
             if (UserRole != null) 
             {

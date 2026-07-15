@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RoleBase.Data;
 using RoleBase.DTOs;
@@ -8,6 +9,7 @@ using RoleBase.Repositories.Interface;
 
 namespace RoleBase.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PermissionController : ControllerBase

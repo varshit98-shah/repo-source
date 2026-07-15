@@ -58,7 +58,7 @@ namespace RoleBase.Repositories.RepoImplementations
                 RoleId = RoleId,
             };
             await _context.RolePermissions.AddAsync(rolePermission);
-        
+          
         }
         public async Task<List<string>> GetPermissionsByUserIdAsync(int UserId)
         {

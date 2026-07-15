@@ -25,13 +25,13 @@ namespace RoleBase.Repositories.RepoImplementations
 
         public async Task<bool> RegisterAsync(RegisterDto dto)
         {
-            var hashPassword =  BCrypt.Net.BCrypt.HashPassword(dto.Password);
             var existingUser = await _userRepository.GetUserByEmailAsync(dto.Email);
 
             if (existingUser != null)
             {
                 return false;
             }
+            var hashPassword =  BCrypt.Net.BCrypt.HashPassword(dto.Password);
 
             var user = new User
             {
@@ -42,7 +42,7 @@ namespace RoleBase.Repositories.RepoImplementations
             await _userRepository.AddAsync(user);
             await _userRepository.SaveAsync();
 
-            var UserRoles = _context.Roles.FirstOrDefault(x => x.RoleName == "User");
+            var UserRoles = _context.Roles.FirstOrDefault(x => x.RoleName == "Student");
 
             if (UserRoles != null) 
             {
@@ -64,18 +64,19 @@ namespace RoleBase.Repositories.RepoImplementations
 
             if (user == null) { return null; }
             bool isValid;
-            if (user.Id < 9)
-            {
-                isValid = dto.Password == user.Password;
-            }
-            else 
-            {
-                isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
-            }
+             if (user.Id == 2 && user.Id ==  3)
+             {
+                 isValid = dto.Password == user.Password;
+             }
+             else 
+             {
+                 isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
+             }
+            
 
-          
+            //bool isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
 
-            if(!isValid) { return null; }
+            if (!isValid) { return null; }
             
             var RoleName = await  _roleRepository.GetUserRoleAsync(user.Id);
             
