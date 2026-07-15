@@ -1,0 +1,221 @@
+.layout-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f5f7fa;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #3182ce, #2b6cb0);
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a202c;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+  }
+}
+
+.sidebar-nav {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #ebf8ff;
+      color: #3182ce;
+    }
+
+    &.active {
+      background-color: #3182ce;
+      color: white;
+      box-shadow: 0 4px 6px rgba(49, 130, 206, 0.2);
+    }
+    
+    .nav-text {
+      white-space: nowrap;
+    }
+  }
+}
+
+/* Main Content */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Important for flex children to allow text truncation */
+}
+
+/* Topbar Styling */
+.topbar {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #4a5568;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #f7fafc;
+    }
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        background-color: #ecc94b;
+        color: #744210;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+
+        .user-name {
+          font-weight: 600;
+          color: #2d3748;
+          font-size: 0.95rem;
+          line-height: 1.2;
+        }
+
+        .user-role {
+          font-size: 0.75rem;
+          color: #718096;
+          margin-top: 2px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .logout-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: 1px solid #e2e8f0;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      color: #e53e3e;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #fff5f5;
+        border-color: #feb2b2;
+      }
+    }
+  }
+}
+
+/* Page Content Area */
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Collapsed State */
+.layout-container.collapsed {
+  .sidebar {
+    width: 80px;
+
+    .logo-text {
+      opacity: 0;
+      display: none;
+    }
+
+    .sidebar-nav {
+      padding: 1.5rem 0.5rem;
+
+      .nav-item {
+        justify-content: center;
+        padding: 0.75rem;
+        
+        .nav-text {
+          display: none;
+        }
+      }
+    }
+  }
+}
