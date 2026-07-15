@@ -290,6 +290,39 @@ namespace StudentProj.API.Controllers
             return StatusCode(success.StatusCodes, success);
         }
 
+        [HttpPost("logout")]
+        public async Task<ActionResult> Logout([FromBody] TokenRequestDTO dto)
+        {
+            if (string.IsNullOrEmpty(dto.AccessToken))
+            {
+                var error = ApiResponse<object>.Create(ResponseStatus.BadRequest, "Invalid client request.");
+                return StatusCode(error.StatusCodes, error);
+            }
+
+            ClaimsPrincipal? principal = _jwtService.GetClaimsPrincipalFromExpiredToken(dto.AccessToken);
+            if (principal == null)
+            {
+                var error = ApiResponse<object>.Create(ResponseStatus.BadRequest, "Invalid access token.");
+                return StatusCode(error.StatusCodes, error);
+            }
+
+            var emailClaim = principal.FindFirst("Email") ?? principal.FindFirst(ClaimTypes.Email);
+            if (emailClaim != null)
+            {
+                var student = await _login.GetStudentbyemailasync(emailClaim.Value);
+                if (student != null)
+                {
+                    student.RefreshToken = null;
+                    student.RefreshTokenExpiryTime = null;
+                    await _studentRepo.UpdateStudentasync(student.Id, student);
+                    await _loggingService.LogActivityAsync(student.Name, student.Email, "User Logged Out", HttpContext);
+                }
+            }
+
+            var response = ApiResponse<object>.Create(ResponseStatus.UserUpdatedSuccessfully, "Logged out successfully.");
+            return StatusCode(response.StatusCodes, response);
+        }
+
         private async Task<bool> IsRateLimitAllowedAsync(string key, int maxRequests)
         {
             var currentStr = await _cache.GetStringAsync(key);

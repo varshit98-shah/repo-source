@@ -26,6 +26,7 @@ namespace StudentProj.Application
             services.AddScoped<IMenuService, MenuService>();
             services.AddScoped<IRoutePermissionService, RoutePermissionService>();
             services.AddScoped<IRegisterService, RegisterService>();
+            services.AddScoped<IDashboardService, DashboardService>();
 
             services.AddFluentValidationAutoValidation();
             services.AddScoped<IValidator<StudentDTO>, StudentValidator>();
