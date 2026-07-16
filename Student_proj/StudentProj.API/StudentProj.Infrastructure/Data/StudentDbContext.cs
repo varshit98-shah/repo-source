@@ -48,9 +48,9 @@ namespace StudentProj.Data
             });
 
             modelBuilder.Entity<Roles>().HasData(
-                new Roles { Id = 1, RoleName = "Super Admin", IsDeleted = false },
-                new Roles { Id = 2, RoleName = "Admin", IsDeleted = false },
-                new Roles { Id = 3, RoleName = "User", IsDeleted = false }
+                new Roles { Id = 1, RoleName = "Super Admin", Priority = 1, IsDeleted = false },
+                new Roles { Id = 2, RoleName = "Admin", Priority = 2, IsDeleted = false },
+                new Roles { Id = 3, RoleName = "User", Priority = 3, IsDeleted = false }
             );
 
             modelBuilder.Entity<Attendance>(entity =>

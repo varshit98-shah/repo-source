@@ -22,7 +22,10 @@ namespace StudentProj.API.Controllers
         [HttpGet("stats")]
         public async Task<ActionResult> GetDashboardStats()
         {
-            var stats = await _dashboardService.GetDashboardStatsAsync();
+            var email = User.FindFirst(System.Security.Claims.ClaimTypes.Email)?.Value ?? User.FindFirst("Email")?.Value;
+            var primaryRole = User.FindFirst("PrimaryRole")?.Value ?? "User";
+
+            var stats = await _dashboardService.GetDashboardStatsAsync(email, primaryRole);
             var response = ApiResponse<DashboardStatsDTO>.Create(ResponseStatus.DashboardStatsRetrievedSuccessfully, stats);
             return StatusCode(response.StatusCodes, response);
         }

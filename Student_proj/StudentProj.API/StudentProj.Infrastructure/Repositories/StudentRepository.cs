@@ -157,5 +157,38 @@ namespace StudentProj.Infrastructure.Repositories
                 .Where(s => s.Phone == phone && !s.IsDeleted)
                 .FirstOrDefaultAsync();
         }
+
+        public async Task<(IEnumerable<Student> Students, int TotalCount)> GetPaginatedStudentsAsync(string? searchTerm, int pageNumber, int pageSize)
+        {
+            var query = _dbContext.Student.Where(s => !s.IsDeleted).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                var lowerSearch = searchTerm.ToLower();
+                query = query.Where(s => 
+                    s.Name.ToLower().Contains(lowerSearch) || 
+                    s.Email.ToLower().Contains(lowerSearch) || 
+                    s.Phone.Contains(lowerSearch));
+            }
+
+            var totalCount = await query.CountAsync();
+
+            var students = await query
+                .OrderBy(s => s.Id)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (students, totalCount);
+        }
+
+        public async Task<List<string>> GetStudentEmailsByRoleAsync(string roleName)
+        {
+            return await _dbContext.StudentRoles
+                .Where(sr => sr.Role.RoleName == roleName && !sr.IsDeleted && !sr.Role.IsDeleted && !sr.Student.IsDeleted)
+                .Select(sr => sr.Student.Email)
+                .Distinct()
+                .ToListAsync();
+        }
     }
 }

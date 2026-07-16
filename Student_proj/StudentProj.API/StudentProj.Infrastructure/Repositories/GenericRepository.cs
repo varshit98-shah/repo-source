@@ -74,5 +74,12 @@ namespace StudentProj.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
             return entity;
         }
+
+        public virtual async Task<int> CountAsync(Expression<Func<T, bool>>? filter = null)
+        {
+            if (filter != null)
+                return await _dbSet.CountAsync(filter);
+            return await _dbSet.CountAsync();
+        }
     }
 }

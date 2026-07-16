@@ -5,7 +5,7 @@ namespace StudentProj.Application.Interfaces
 {
     public interface IJwtService
     {
-        string GenerateToken(Student student, List<string> roles);
+        string GenerateToken(Student student, List<string> roles, string primaryRole);
         string GenerateRefreshToken();
         ClaimsPrincipal? GetClaimsPrincipalFromExpiredToken(string? token);
     }

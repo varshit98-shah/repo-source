@@ -29,6 +29,14 @@ namespace StudentProj.API.Controllers
             return StatusCode(response.StatusCodes, response);
         }
 
+        [HttpGet("paginated")]
+        public async Task<IActionResult> GetPaginated([FromQuery] PaginatedRequestDTO request)
+        {
+            var result = await _service.GetPaginatedStudentsAsync(request);
+            var response = ApiResponse<PaginatedResultDTO<StudentDTO>>.Create(ResponseStatus.UserRetriveSuccessfully, result);
+            return StatusCode(response.StatusCodes, response);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -45,7 +53,10 @@ namespace StudentProj.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateStudent([FromBody] RegisterDTO dto)
         {
-            var newId = await _service.Createstudentasync(dto);
+            var createdBy = User.FindFirst("Name")?.Value ?? "System";
+            var ipAddress = StudentProj.Domain.Common.IpHelper.GetClientIpAddress(HttpContext);
+
+            var newId = await _service.Createstudentasync(dto, createdBy, ipAddress);
             if (newId <= 0)
             {
                 var bad = ApiResponse<object>.Create(ResponseStatus.BadRequest, "Could not create student");
@@ -66,7 +77,10 @@ namespace StudentProj.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStudent(int id, [FromBody] StudentDTO dto)
         {
-            var (success, error) = await _service.UpdateStudentasync(id, dto);
+            var updatedBy = User.FindFirst("Name")?.Value ?? "System";
+            var ipAddress = StudentProj.Domain.Common.IpHelper.GetClientIpAddress(HttpContext);
+
+            var (success, error) = await _service.UpdateStudentasync(id, dto, updatedBy, ipAddress);
             if (!success)
             {
                 var bad = ApiResponse<object>.Create(ResponseStatus.BadRequest, error ?? "Failed to update student");

@@ -15,6 +15,7 @@ namespace StudentProj.Domain.Interfaces
         Task<Roles> GetRoleByIdAsync(int roleId);
         Task UpdateStudentRoleAsync(int studentId, int roleId);
         Task<bool> RevokeRoleAsync(int studentId, int roleId);
+        Task<string> GetPrimaryRoleAsync(int studentId);
 
     }
 }

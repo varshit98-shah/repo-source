@@ -21,8 +21,8 @@ namespace StudentProj.Application.DTOs
         public string Address { get; set; }
 
         [Required]
-        [StringLength(10, MinimumLength = 10)]
-        [Phone]
+        [StringLength(13, MinimumLength = 13)]
+        [RegularExpression(@"^\+91[0-9]{10}$", ErrorMessage = "Phone number must start with +91 followed by 10 digits.")]
         public string Phone { get; set; }
 
 

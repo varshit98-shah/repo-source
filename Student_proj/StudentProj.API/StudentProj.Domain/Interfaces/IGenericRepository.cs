@@ -10,5 +10,6 @@ namespace StudentProj.Domain.Interfaces
         Task<IEnumerable<T>> GetAllByFilterAsync(Expression<Func<T, bool>> filter, bool useNoTracking = false, params Expression<Func<T, object>>[] includes);
         Task<T> UpdateAsync(T entity);
         Task<bool> DeleteAsync(T entity);
+        Task<int> CountAsync(Expression<Func<T, bool>>? filter = null);
     }
 }

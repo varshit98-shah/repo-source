@@ -16,6 +16,8 @@ namespace StudentProj.Domain.Entities
         [StringLength(12)]
         public string RoleName { get; set; }
 
+        public int Priority { get; set; } = 99; // Lower number = higher priority
+
         public bool IsDeleted { get; set; } = false;
 
         public DateTime? DeletedAt { get; set; }

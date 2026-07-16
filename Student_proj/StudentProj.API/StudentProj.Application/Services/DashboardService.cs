@@ -23,21 +23,43 @@ namespace StudentProj.Application.Services
             _logsRepo = logsRepo;
         }
 
-        public async Task<DashboardStatsDTO> GetDashboardStatsAsync()
+        public async Task<DashboardStatsDTO> GetDashboardStatsAsync(string? email, string primaryRole)
         {
-            var students = await _studentRepo.GetAllStudentsasync();
-            var courses = await _courseRepo.GetAllAsync();
-            var subjects = await _subjectRepo.GetAllAsync();
+            var studentsCount = await _studentRepo.CountAsync();
+            var coursesCount = await _courseRepo.CountAsync();
+            var subjectsCount = await _subjectRepo.CountAsync();
             
-            var logs = await _logsRepo.GetLogsAsync(new StudentProj.Domain.Entities.Logs());
-            var recentLogins = logs.Count(l => l.Action != null && l.Action.Contains("Login Succeeded") && l.Timestamp >= DateTime.UtcNow.AddDays(-7));
+            var recentLogins = await _logsRepo.CountRecentLoginsAsync(DateTime.UtcNow.AddDays(-7));
+
+            List<string>? userEmails = null;
+            if (primaryRole == "Admin")
+            {
+                userEmails = await _studentRepo.GetStudentEmailsByRoleAsync("User");
+            }
+
+            var recentLogs = await _logsRepo.GetRecentLogsAsync(
+                count: 20, 
+                email: primaryRole != "Super Admin" ? email : null, 
+                userEmails: userEmails
+            );
+
+            var recentActivities = recentLogs.Select(l => new LogDTO 
+            {
+                Id = l.Id,
+                Username = l.Name,
+                Email = l.Email,
+                Action = l.Action,
+                IpAddress = l.IpAddress,
+                Timestamp = l.Timestamp
+            }).ToList();
 
             return new DashboardStatsDTO
             {
-                TotalStudents = students.Count,
-                ActiveCourses = courses.Count(),
-                TotalSubjects = subjects.Count(),
-                RecentLogins = recentLogins
+                TotalStudents = studentsCount,
+                ActiveCourses = coursesCount,
+                TotalSubjects = subjectsCount,
+                RecentLogins = recentLogins,
+                RecentActivities = recentActivities
             };
         }
     }

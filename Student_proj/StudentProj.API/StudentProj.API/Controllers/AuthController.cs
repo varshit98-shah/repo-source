@@ -87,7 +87,8 @@ namespace StudentProj.API.Controllers
                 await _auth.AssignRoleAsync(student.Id, studentRole.Id);
 
             var roles = await _auth.GetStudentRolesAsync(student.Id);
-            var token = _jwtService.GenerateToken(student, roles);
+            var primaryRole = await _auth.GetPrimaryRoleAsync(student.Id);
+            var token = _jwtService.GenerateToken(student, roles, primaryRole);
             var refreshToken = _jwtService.GenerateRefreshToken();
             var permissions = await _loginService.GetStudentPermissionAsync(student.Id);
 
@@ -128,7 +129,8 @@ namespace StudentProj.API.Controllers
             }
 
             var roles = await _login.GetStudentRolesAsync(student.Id);
-            var token = _jwtService.GenerateToken(student, roles);
+            var primaryRole = await _login.GetPrimaryRoleAsync(student.Id);
+            var token = _jwtService.GenerateToken(student, roles, primaryRole);
             var refreshToken = _jwtService.GenerateRefreshToken();
             var permission = await _loginService.GetStudentPermissionAsync(student.Id);
 
@@ -273,7 +275,8 @@ namespace StudentProj.API.Controllers
             }
 
             var roles = await _login.GetStudentRolesAsync(student.Id);
-            var newAccessToken = _jwtService.GenerateToken(student, roles);
+            var primaryRole = await _login.GetPrimaryRoleAsync(student.Id);
+            var newAccessToken = _jwtService.GenerateToken(student, roles, primaryRole);
             var newRefreshToken = _jwtService.GenerateRefreshToken();
 
             student.RefreshToken = newRefreshToken;

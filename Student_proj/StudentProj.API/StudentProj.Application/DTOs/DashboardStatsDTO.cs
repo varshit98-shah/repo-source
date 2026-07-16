@@ -6,5 +6,6 @@ namespace StudentProj.Application.DTOs
         public int ActiveCourses { get; set; }
         public int TotalSubjects { get; set; }
         public int RecentLogins { get; set; }
+        public System.Collections.Generic.List<LogDTO> RecentActivities { get; set; } = new();
     }
 }

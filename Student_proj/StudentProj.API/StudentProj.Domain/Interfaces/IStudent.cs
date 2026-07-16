@@ -13,5 +13,7 @@ namespace StudentProj.Domain.Interfaces
         Task<bool> DeleteStudentasync(Student student, string? deletedBy = null);
         Task<int> UpsertStudentAsync(Student student);
         Task<Student> GetStudentByPhoneAsync(string phone);
+        Task<(IEnumerable<Student> Students, int TotalCount)> GetPaginatedStudentsAsync(string? searchTerm, int pageNumber, int pageSize);
+        Task<List<string>> GetStudentEmailsByRoleAsync(string roleName);
     }
 }

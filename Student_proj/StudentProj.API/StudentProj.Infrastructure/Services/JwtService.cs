@@ -18,7 +18,7 @@ namespace StudentProj.Infrastructure.Services
         {
             _config = config;
         }
-        public string GenerateToken(Student student, List<string> roles)
+        public string GenerateToken(Student student, List<string> roles, string primaryRole)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credintials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -26,7 +26,8 @@ namespace StudentProj.Infrastructure.Services
             {
                 new Claim("Id", student.Id.ToString()),
                 new Claim("Name", student.Name),
-                new Claim("Email", student.Email)
+                new Claim("Email", student.Email),
+                new Claim("PrimaryRole", primaryRole)
             };
             foreach (var role in roles)
             {
@@ -34,7 +35,7 @@ namespace StudentProj.Infrastructure.Services
             }
             var token = new JwtSecurityToken(
                 claims: claims,
-                expires: DateTimeHelper.GetIndianStandardTime().AddHours(1),
+                expires: DateTimeHelper.GetIndianStandardTime().AddMinutes(1),
                 signingCredentials: credintials
             );
             return new JwtSecurityTokenHandler().WriteToken(token);

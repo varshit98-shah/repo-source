@@ -62,5 +62,16 @@ namespace StudentProj.Infrastructure.Repositories
 
             return permissions;
         }
+
+        public async Task<string> GetPrimaryRoleAsync(int studentId)
+        {
+            var role = await _dbcontext.StudentRoles
+                .Where(sr => sr.StudentId == studentId && !sr.IsDeleted && !sr.Role.IsDeleted && !sr.Student.IsDeleted)
+                .Select(sr => sr.Role)
+                .OrderBy(r => r.Priority)
+                .FirstOrDefaultAsync();
+
+            return role?.RoleName ?? "User";
+        }
     }
 }

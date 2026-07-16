@@ -7,5 +7,6 @@ namespace StudentProj.Domain.Interfaces
         Task<Student> GetStudentbyemailasync(string email);
         Task<List<string>> GetStudentRolesAsync(int studentId);
         Task<List<RolePermissions>> GetStudentPermissionAsync(int studentId);
+        Task<string> GetPrimaryRoleAsync(int studentId);
     }
 }

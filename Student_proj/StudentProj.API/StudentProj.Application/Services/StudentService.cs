@@ -3,6 +3,7 @@ using StudentProj.Application.DTOs;
 using StudentProj.Application.Interfaces;
 using StudentProj.Domain.Entities;
 using StudentProj.Domain.Interfaces;
+using StudentProj.Domain.Common;
 
 namespace StudentProj.Application.Services
 {
@@ -16,11 +17,13 @@ namespace StudentProj.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<int> Createstudentasync(RegisterDTO dto)
+        public async Task<int> Createstudentasync(RegisterDTO dto, string? createdBy = null, string? ipAddress = null)
         {
             var entity = _mapper.Map<Student>(dto);
             // Hash the password before saving to the database
             entity.PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password);
+            entity.CreatedBy = createdBy;
+            entity.IpAddress = ipAddress;
             return await _repository.Createstudentasync(entity);
         }
 
@@ -58,7 +61,7 @@ namespace StudentProj.Application.Services
             return _mapper.Map<IEnumerable<StudentDTO>>(entities);
         }
 
-        public async Task<(bool Success, string Error)> UpdateStudentasync(int id, StudentDTO dto)
+        public async Task<(bool Success, string Error)> UpdateStudentasync(int id, StudentDTO dto, string? updatedBy = null, string? ipAddress = null)
         {
             // Fetch existing so we don't overwrite PasswordHash with null
             var existingEntity = await _repository.GetStudentbyid(id);
@@ -79,6 +82,9 @@ namespace StudentProj.Application.Services
             existingEntity.Email = dto.Email;
             existingEntity.Address = dto.Address;
             existingEntity.Phone = dto.Phone;
+            existingEntity.UpdatedAt = DateTimeHelper.GetIndianStandardTime();
+            existingEntity.UpdatedBy = updatedBy;
+            existingEntity.IpAddress = ipAddress;
 
             var result = await _repository.UpdateStudentasync(id, existingEntity);
             return (result, result ? null : "Failed to update student");
@@ -88,6 +94,19 @@ namespace StudentProj.Application.Services
         {
             var entity = _mapper.Map<Student>(student);
             return await _repository.UpsertStudentAsync(entity);
+        }
+
+        public async Task<PaginatedResultDTO<StudentDTO>> GetPaginatedStudentsAsync(PaginatedRequestDTO request)
+        {
+            var (students, totalCount) = await _repository.GetPaginatedStudentsAsync(request.SearchTerm, request.PageNumber, request.PageSize);
+            
+            return new PaginatedResultDTO<StudentDTO>
+            {
+                Items = _mapper.Map<List<StudentDTO>>(students),
+                TotalCount = totalCount,
+                PageNumber = request.PageNumber,
+                PageSize = request.PageSize
+            };
         }
     }
 }
