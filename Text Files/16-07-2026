@@ -1,0 +1,87 @@
+*Relational Database (RDBMS) 
+-Stores data in tables (rows & columns).
+-Row = Record, Column = Attribute.
+-Uses Primary Key to uniquely identify records.
+-Uses Foreign Key to connect tables.
+-Supports relationships between tables.
+-Uses SQL to store and manage data.
+-Reduces data redundancy.
+-Ensures data integrity and consistency.
+
+*SQL vs NoSQL Databases 
+-SQL	NoSQL
+-Relational database	Non-relational database
+-Stores data in tables	Stores data as documents, key-value, graph, etc.
+-Fixed schema	Flexible schema
+-Uses SQL language	Uses different query methods
+-Best for structured data	Best for unstructured/semi-structured data
+
+*Basic SQL Syntax & Keywords 
+-SELECT – Retrieve data
+-FROM – Specify table
+-WHERE – Filter records
+-INSERT INTO – Add new record
+-UPDATE – Modify existing data
+-DELETE – Remove records
+-CREATE TABLE – Create a table
+-ALTER TABLE – Modify table structure
+-DROP TABLE – Delete a table
+-ORDER BY – Sort data
+-GROUP BY – Group records
+-HAVING – Filter grouped data
+-DISTINCT – Remove duplicate values
+-AS – Give an alias (temporary name)
+-JOIN – Combine data from multiple tables
+
+*Data Types in SQL (Short Key Points)
+-Numeric Data Types
+    -INT – Integer numbers
+    -BIGINT – Large integers
+    -DECIMAL – Exact decimal values
+    -FLOAT – Approximate decimal values
+-Character Data Types
+    -CHAR – Fixed-length text
+    -VARCHAR – Variable-length text
+    -TEXT – Large text
+-Date & Time Data Types
+    DATE – Date only
+    TIME – Time only
+    DATETIME – Date and time
+    TIMESTAMP – Date and time with automatic updates
+    Boolean Data Type
+
+*SQL Operators 
+Arithmetic Operators
+    + – Addition
+    - – Subtraction
+    * – Multiplication
+    / – Division
+    % – Modulus (Remainder)
+Comparison Operators
+    = – Equal to
+    != / <> – Not equal to
+    > – Greater than
+    < – Less than
+    >= – Greater than or equal to
+    <= – Less than or equal to
+Logical Operators
+    AND – Both conditions true
+    OR – Any one condition true
+    NOT – Reverse the condition
+Special Operators
+    IN – Match multiple values
+    BETWEEN – Range of values
+    LIKE – Pattern matching
+    IS NULL – Check NULL values
+
+*Data Definition Language (DDL)
+    CREATE – Create database/table
+    ALTER – Modify table structure
+    DROP – Delete database/table
+    TRUNCATE – Remove all rows, keep table
+
+
+*Data Manipulation Language (DML)
+    INSERT – Add new records
+    UPDATE – Modify existing records
+    DELETE – Remove records
