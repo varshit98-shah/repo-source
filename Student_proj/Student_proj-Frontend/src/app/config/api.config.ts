@@ -13,6 +13,7 @@ export const api_config = {
         },
         students:{
             getAll:'api/Student',
+            getPaginated: 'api/Student/paginated',
             create:'api/Student',
             getById:(id:number)=>`api/Student/${id}`,
             update:(id:number)=>`api/Student/${id}`,

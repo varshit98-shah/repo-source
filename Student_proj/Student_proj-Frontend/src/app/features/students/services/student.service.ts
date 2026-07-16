@@ -14,6 +14,14 @@ export class StudentService {
     return this.http.get(`${api_config.base_url}${api_config.endpoints.students.getAll}`);
   }
 
+  getPaginated(page: number, pageSize: number, search?: string): Observable<any> {
+    let url = `${api_config.base_url}${api_config.endpoints.students.getPaginated}?PageNumber=${page}&PageSize=${pageSize}`;
+    if (search) {
+      url += `&SearchTerm=${encodeURIComponent(search)}`;
+    }
+    return this.http.get(url);
+  }
+
   getById(id: number): Observable<any> {
     return this.http.get(`${api_config.base_url}${api_config.endpoints.students.getById(id)}`);
   }

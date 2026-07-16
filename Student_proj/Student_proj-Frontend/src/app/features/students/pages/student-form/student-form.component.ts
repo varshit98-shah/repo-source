@@ -34,6 +34,11 @@ export class StudentFormComponent implements OnInit {
       if (id) {
         this.isEditMode = true;
         this.studentId = +id;
+        
+        // Clear password validation when editing
+        this.studentForm.get('password')?.clearValidators();
+        this.studentForm.get('password')?.updateValueAndValidity();
+        
         this.loadStudent(this.studentId);
       }
     });
@@ -60,10 +65,12 @@ export class StudentFormComponent implements OnInit {
       next: (res) => {
         if (res && res.data) {
           const s = res.data;
+          // Strip +91 for the input field if it exists
+          const phoneVal = s.phone.startsWith('+91') ? s.phone.substring(3) : s.phone;
           this.studentForm.patchValue({
             name: s.name,
             email: s.email,
-            phone: s.phone,
+            phone: phoneVal,
             address: s.address
           });
         }
@@ -89,15 +96,22 @@ export class StudentFormComponent implements OnInit {
     this.isSubmitting.set(true);
     const formValue = { ...this.studentForm.value };
     
-    // Trim string fields to prevent backend validation errors (400 Bad Request)
+    // Trim string fields
     for (const key in formValue) {
       if (typeof formValue[key] === 'string') {
         formValue[key] = formValue[key].trim();
       }
     }
 
+    // Prepend +91 to phone before sending to backend
+    if (!formValue.phone.startsWith('+91')) {
+      formValue.phone = '+91' + formValue.phone;
+    }
+
     if (this.isEditMode && this.studentId) {
-      // Remove password from payload if it's empty (maybe backend ignores it, or we just don't send it)
+      // Pass ID in the URL and remove it from payload
+      delete formValue.id;
+      // Remove password from payload if it's empty
       this.studentService.update(this.studentId, formValue).subscribe({
         next: () => {
           this.isSubmitting.set(false);

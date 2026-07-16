@@ -9,6 +9,7 @@ export interface DashboardStats {
   activeCourses: number;
   totalSubjects: number;
   recentLogins: number;
+  recentActivities?: any[];
 }
 
 export interface ApiResponse<T> {

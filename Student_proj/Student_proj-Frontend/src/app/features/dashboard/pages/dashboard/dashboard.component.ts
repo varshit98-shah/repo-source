@@ -16,13 +16,7 @@ export class DashboardComponent implements OnInit {
   isLoading = signal(true);
   error = signal<string | null>(null);
 
-  recentActivity = [
-    { action: 'Admin updated Student X', time: '10 mins ago', type: 'update' },
-    { action: 'User logged out', time: '1 hour ago', type: 'auth' },
-    { action: 'Admin created Course Y', time: '2 hours ago', type: 'create' },
-    { action: 'New Student registered', time: '5 hours ago', type: 'create' }
-  ];
-
+    
   ngOnInit() {
     this.loadStats();
   }

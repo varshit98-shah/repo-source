@@ -10,11 +10,29 @@
     </button>
   </div>
 
+  <div class="list-controls" style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; justify-content: space-between;">
+    <div class="search-box">
+      <input type="text" placeholder="Search students..." [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color);" />
+    </div>
+    <div class="page-size-selector">
+      <select (change)="onPageSizeChange($event)" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color);">
+        <option [value]="5">5 per page</option>
+        <option [value]="10" selected>10 per page</option>
+        <option [value]="25">25 per page</option>
+        <option [value]="100">100 per page</option>
+      </select>
+    </div>
+  </div>
+
   <div class="table-card">
     <div *ngIf="isLoading()" class="loading-state">
-      <div class="spinner"></div>
+      <div class="spinner" style="margin-bottom: 1rem; width: 40px; height: 40px; border: 4px solid var(--border-color); border-top: 4px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite;"></div>
       <p>Loading students...</p>
     </div>
+    
+    <style>
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 
     <table *ngIf="!isLoading() && students().length > 0" class="data-table">
       <thead>
@@ -47,6 +65,12 @@
     <div *ngIf="!isLoading() && students().length === 0" class="empty-state">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
       <p>No students found.</p>
+    </div>
+
+    <div class="pagination-controls" *ngIf="!isLoading() && totalPages() > 1" style="display: flex; justify-content: center; align-items: center; gap: 1rem; padding: 1rem;">
+      <button (click)="onPageChange(pageNumber() - 1)" [disabled]="pageNumber() === 1" style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); cursor: pointer;" [style.opacity]="pageNumber() === 1 ? '0.5' : '1'">Previous</button>
+      <span>Page {{ pageNumber() }} of {{ totalPages() }}</span>
+      <button (click)="onPageChange(pageNumber() + 1)" [disabled]="pageNumber() === totalPages()" style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); cursor: pointer;" [style.opacity]="pageNumber() === totalPages() ? '0.5' : '1'">Next</button>
     </div>
   </div>
 </div>

@@ -4,10 +4,12 @@ import { Router, RouterModule } from '@angular/router';
 import { StudentService } from '../../services/student.service';
 import { StudentDTO } from '../../models/student.dto';
 
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './student-list.component.html',
   styleUrls: ['./student-list.component.scss']
 })
@@ -17,6 +19,12 @@ export class StudentListComponent implements OnInit {
 
   students = signal<StudentDTO[]>([]);
   isLoading = signal(true);
+  
+  // Pagination State
+  pageNumber = signal(1);
+  pageSize = signal(10);
+  totalCount = signal(0);
+  searchTerm = signal('');
   
   // RBAC signals
   canCreate = signal(false);
@@ -33,7 +41,6 @@ export class StudentListComponent implements OnInit {
     if (permsStr) {
       try {
         const perms = JSON.parse(permsStr);
-        // Look for 'student' menu permissions
         const studentPerms = perms.filter((p: any) => p.menuName.toLowerCase() === 'student');
         
         this.canCreate.set(studentPerms.some((p: any) => p.permission.toLowerCase() === 'create'));
@@ -47,10 +54,11 @@ export class StudentListComponent implements OnInit {
 
   loadStudents() {
     this.isLoading.set(true);
-    this.studentService.getAll().subscribe({
+    this.studentService.getPaginated(this.pageNumber(), this.pageSize(), this.searchTerm()).subscribe({
       next: (res) => {
         if (res && res.data) {
-          this.students.set(res.data);
+          this.students.set(res.data.items || []);
+          this.totalCount.set(res.data.totalCount || 0);
         }
         this.isLoading.set(false);
       },
@@ -59,6 +67,29 @@ export class StudentListComponent implements OnInit {
         this.isLoading.set(false);
       }
     });
+  }
+
+  onSearchChange() {
+    this.pageNumber.set(1);
+    this.loadStudents();
+  }
+
+  onPageChange(newPage: number) {
+    if (newPage >= 1 && newPage <= this.totalPages()) {
+        this.pageNumber.set(newPage);
+        this.loadStudents();
+    }
+  }
+
+  onPageSizeChange(event: Event) {
+    const size = parseInt((event.target as HTMLSelectElement).value, 10);
+    this.pageSize.set(size);
+    this.pageNumber.set(1);
+    this.loadStudents();
+  }
+
+  totalPages(): number {
+    return Math.ceil(this.totalCount() / this.pageSize());
   }
 
   deleteStudent(id: number) {

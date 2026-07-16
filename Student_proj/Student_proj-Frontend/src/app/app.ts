@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ToastComponent } from './shared/components/toast/toast.component';
+import { ThemeService } from './core/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,6 @@ import { ToastComponent } from './shared/components/toast/toast.component';
 })
 export class App {
   protected readonly title = signal('Student_proj-Frontend');
+
+  constructor(private themeService: ThemeService) {}
 }
