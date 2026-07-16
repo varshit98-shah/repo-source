@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Routing;
-using RoleBase.Repositories.Interface;
 using System.Security.Claims;
 
 namespace RoleBase.Middleware
@@ -15,9 +14,9 @@ namespace RoleBase.Middleware
         }
 
         public async Task InvokeAsync(
-            HttpContext context,
-            IApiPermission apiPermission)
+            HttpContext context)
         {
+            
             // Get endpoint information
             var endpoint = context.GetEndpoint();
 
@@ -28,18 +27,6 @@ namespace RoleBase.Middleware
                 await _next(context);
                 return;
             }
-
-            // Get route template
-            var routeEndpoint = endpoint as RouteEndpoint;
-
-            var path = routeEndpoint?
-                .RoutePattern
-                .RawText?
-                .ToLower();
-
-            var method =
-                context.Request.Method.ToUpper();
-
             // Check JWT authentication
             if (context.User.Identity == null ||
                 !context.User.Identity.IsAuthenticated)
@@ -52,26 +39,6 @@ namespace RoleBase.Middleware
 
                 return;
             }
-
-            // Find API configuration
-            var apiPermissionData =
-                await apiPermission
-                    .GetApiPermissionAsync(
-                        method,
-                        "/" + path);
-
-            // API not configured
-            if (apiPermissionData == null)
-            {
-                context.Response.StatusCode =
-                    StatusCodes.Status403Forbidden;
-
-                await context.Response.WriteAsync(
-                    $"API permission not configured for {method} {path}");
-
-                return;
-            }
-
             // Read user id from JWT
             var userIdClaim =
                 context.User.FindFirst(
@@ -87,22 +54,32 @@ namespace RoleBase.Middleware
 
                 return;
             }
+           
 
-            int userId =
-                int.Parse(userIdClaim.Value);
+            var routeValues = context.Request.RouteValues;
 
-            // Load user permissions
-            var userPermissions =
-                await apiPermission
-                    .GetUserPermissionsAsync(
-                        userId);
+            var controller = routeValues["controller"]?.ToString();
 
-            // Check permission
-            bool hasPermission =
-                userPermissions.Contains(
-                    apiPermissionData
-                        .Permission
-                        .PermissionName);
+            string method = context.Request.Method;
+            string action = method.ToUpper() switch
+            {
+                "GET" => "READ",
+                "POST" => "Create",
+                "PUT" => "Update",
+                "DELETE" => "Delete",
+                _ => "Unknown"
+            };
+            var requiredPermission = action;
+
+            var userPermissions = context.User.Claims
+                 .Where(c => c.Type == "Permission")
+                 .Select(c => c.Value)
+                 .ToList();
+
+
+            bool hasPermission = userPermissions
+                        .Any(p => p.Equals( requiredPermission,
+                                         StringComparison.OrdinalIgnoreCase));
 
             if (!hasPermission)
             {

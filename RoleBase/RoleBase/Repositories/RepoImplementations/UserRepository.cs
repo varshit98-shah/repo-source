@@ -1,91 +1,108 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using RoleBase.Data;
+using RoleBase.DTOs;
 using RoleBase.Model;
 using RoleBase.Repositories.Interface;
-using Microsoft.AspNetCore.Mvc;
-using RoleBase.DTOs;
-using System.Net.WebSockets;
-
+using System.Security.Claims;
+using System.Numerics;
+using RoleBase.Middleware;
 namespace RoleBase.Repositories.RepoImplementations
 {
     public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public UserRepository(ApplicationDbContext context)
+        public UserRepository(ApplicationDbContext context  )
         {
             _context = context;
         }
 
-        /*
-        Task<User?> GetUserByIdAsync(int userId);
-        Task<User?> GetUserByEmailAsync(string email);
-        Task<IEnumerable<User>> GetAllAsync();
-
-        Task AddAsync(User user);
-        Task SaveAsync();
-        */
         public async Task<User?> GetUserByIdAsync(int userId)
         {
-            return await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
-
+            return await _context.Users
+                .FirstOrDefaultAsync(x =>
+                    x.Id == userId &&
+                    !x.IsDelete);
         }
 
         public async Task<User?> GetUserByEmailAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
+            return await _context.Users
+                .FirstOrDefaultAsync(x =>
+                    x.Email == email &&
+                    !x.IsDelete);
         }
 
-        public async Task<IEnumerable<User>> GetAllAsync()
+        public async Task<IEnumerable<UserResponseDto>> GetAllAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                     .Where(x => !x.IsDelete)
+                     .Select(x => new UserResponseDto
+                            {
+                              Id = x.Id,
+                              Name = x.Name,
+                              Email = x.Email
+                            })
+                     .ToListAsync();
         }
-        public async Task  AddAsync(User user) 
+
+        public async Task AddAsync(User user)
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
         }
+
         public async Task CreateAsync(RegisterDto dto)
         {
             var hashPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password);
+
             var user = new User
             {
                 Name = dto.Name,
+                Email = dto.Email,
                 Password = hashPassword,
-                Email = dto.Email
+                IsDelete = false
             };
-             _context.Users.Add(user);
+
+            _context.Users.Add(user);
+
             await _context.SaveChangesAsync();
 
-            var UserRole = _context.Roles.FirstOrDefault(x => x.RoleName == "Student");
+            // Default Role Assignment
+            var defaultRole = await _context.Roles
+                .FirstOrDefaultAsync(x => x.RoleName == "User");
 
-            if (UserRole != null) 
+            if (defaultRole != null)
             {
                 var assignRole = new UserRole
                 {
                     UserId = user.Id,
-                    RoleId = UserRole.Id
+                    RoleId = defaultRole.Id
                 };
+
                 _context.UserRoles.Add(assignRole);
+
                 await _context.SaveChangesAsync();
-            
             }
-          
         }
+
         public async Task SaveAsync()
         {
             await _context.SaveChangesAsync();
-
         }
-       public async Task<bool> UpdateAsync(UpdateDto dto) 
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == dto.Email);
 
-            if(user == null) 
+        public async Task<bool> UpdateAsync(UpdateDto dto)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(x =>
+                    x.Email == dto.Email &&
+                    !x.IsDelete);
+
+            if (user == null)
             {
                 return false;
-            };
+            }
+
             user.Name = dto.Name;
             user.Email = dto.Email;
 
@@ -93,14 +110,45 @@ namespace RoleBase.Repositories.RepoImplementations
 
             return true;
         }
-        public async Task<bool> DeleteAsync(int id)
+
+        public async Task<bool> DeleteAsync(int id , int LoggedId)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users
+                .FirstOrDefaultAsync(x =>
+                    x.Id == id &&
+                    !x.IsDelete);
 
             if (user == null)
+            {
                 return false;
+            }
+            if (id == LoggedId) 
+            {
+                return false;
+            }
+            user.IsDelete = true;
 
-            _context.Users.Remove(user);
+            await _context.SaveChangesAsync(); 
+
+            return true;
+        }
+
+        public async Task<bool> DeleteMultipleAsync(List<int> userIds)
+        {
+            var users = await _context.Users
+                .Where(x => userIds.Contains(x.Id) && !x.IsDelete)
+                .ToListAsync();
+
+            if (!users.Any())
+            {
+                return false;
+            }
+
+            foreach (var user in users)
+            {
+                user.IsDelete = true;
+            }
+
             await _context.SaveChangesAsync();
 
             return true;

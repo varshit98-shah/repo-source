@@ -60,15 +60,15 @@ namespace RoleBase.Repositories.RepoImplementations
             await _context.RolePermissions.AddAsync(rolePermission);
           
         }
-        public async Task<List<string>> GetPermissionsByUserIdAsync(int UserId)
+        public async Task<List<Permission>> GetPermissionsByUserIdAsync(int userId)
         {
-           
-                
             return await _context.UserRoles
-                                 .Where(ur => ur.UserId == UserId)
-                                 .SelectMany(ur => ur.Role.RolePermission)
-                                 .Select(ur => ur.Permission.PermissionName)
-                                 .ToListAsync();
+                .Where(ur => ur.UserId == userId)
+                .SelectMany(ur => ur.Role.RolePermission)
+                .Select(rp => rp.Permission)
+                .Distinct()
+                .ToListAsync();
         }
+
     }
 }

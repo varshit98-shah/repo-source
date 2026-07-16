@@ -2,9 +2,7 @@ using RoleBase.DTOs;
 using RoleBase.Repositories.Interface;
 using RoleBase.Services;
 using RoleBase.Model;
-using Microsoft.AspNetCore.Identity;
 using RoleBase.Data;
-using RoleBase.Model;
 
 namespace RoleBase.Repositories.RepoImplementations
 {
@@ -14,75 +12,105 @@ namespace RoleBase.Repositories.RepoImplementations
         private readonly JwtService _jwtService;
         private readonly ApplicationDbContext _context;
         private readonly IRoleRepository _roleRepository;
+        private readonly IPermissionRepository _permissionRepository;
 
-        public AuthRepository(IUserRepository userRepository, JwtService jwtService , ApplicationDbContext context , IRoleRepository roleRepository)
+        public AuthRepository(
+            IUserRepository userRepository,
+            JwtService jwtService,
+            ApplicationDbContext context,
+            IRoleRepository roleRepository,
+            IPermissionRepository permissionRepository)
         {
             _userRepository = userRepository;
             _jwtService = jwtService;
             _context = context;
             _roleRepository = roleRepository;
+            _permissionRepository = permissionRepository;
         }
 
         public async Task<bool> RegisterAsync(RegisterDto dto)
         {
-            var existingUser = await _userRepository.GetUserByEmailAsync(dto.Email);
+            var existingUser =
+                await _userRepository
+                    .GetUserByEmailAsync(dto.Email);
 
             if (existingUser != null)
             {
                 return false;
             }
-            var hashPassword =  BCrypt.Net.BCrypt.HashPassword(dto.Password);
+
+            var hashedPassword =
+                BCrypt.Net.BCrypt.HashPassword(dto.Password);
 
             var user = new User
             {
                 Name = dto.Name,
                 Email = dto.Email,
-                Password = hashPassword
+                Password = hashedPassword
             };
+
             await _userRepository.AddAsync(user);
             await _userRepository.SaveAsync();
 
-            var UserRoles = _context.Roles.FirstOrDefault(x => x.RoleName == "Student");
+            var defaultRole = _context.Roles
+                .FirstOrDefault(r => r.RoleName == "Student");
 
-            if (UserRoles != null) 
+            if (defaultRole != null)
             {
-                var assignRole = new UserRole
+                var userRole = new UserRole
                 {
                     UserId = user.Id,
-                    RoleId = UserRoles.Id
+                    RoleId = defaultRole.Id
                 };
-              _context.UserRoles.Add(assignRole);
-              await _userRepository.SaveAsync();
-            }
-            return true;
 
+                _context.UserRoles.Add(userRole);
+                await _context.SaveChangesAsync();
+            }
+
+            return true;
         }
 
-        public async Task<string?> LoginAsync(LoginDto dto) 
+        public async Task<string?> LoginAsync(LoginDto dto)
         {
-            var user = await _userRepository.GetUserByEmailAsync(dto.Email);
+            var user =
+                await _userRepository
+                    .GetUserByEmailAsync(dto.Email);
 
-            if (user == null) { return null; }
+            if (user == null)
+            {
+                return null;
+            }
+
             bool isValid;
-             if (user.Id == 2 && user.Id ==  3)
-             {
-                 isValid = dto.Password == user.Password;
-             }
-             else 
-             {
-                 isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
-             }
+
+            
+             isValid = BCrypt.Net.BCrypt.Verify(
+                    dto.Password,
+                    user.Password);
             
 
-            //bool isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
+            if (!isValid)
+            {
+                return null;
+            }
 
-            if (!isValid) { return null; }
-            
-            var RoleName = await  _roleRepository.GetUserRoleAsync(user.Id);
-            
-            RoleName ??= "User";
+            var roleName =
+                await _roleRepository
+                    .GetUserRoleAsync(user.Id);
 
-            return _jwtService.GenerateToken(user , RoleName);
+            roleName ??= "User";
+
+            var permissions =
+                await _permissionRepository
+                    .GetPermissionsByUserIdAsync(user.Id);
+
+            var token =
+                _jwtService.GenerateToken(
+                    user,
+                    roleName,
+                    permissions);
+
+            return token;
         }
     }
 }

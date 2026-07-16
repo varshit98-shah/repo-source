@@ -10,8 +10,9 @@
 
         public string Password { get; set; }
 
-        
-       
+        public bool IsDelete  { get; set; } = false;
+
+
 
         public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 

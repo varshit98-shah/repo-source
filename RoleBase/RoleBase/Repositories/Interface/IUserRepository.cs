@@ -7,12 +7,12 @@ namespace RoleBase.Repositories.Interface
     {
         Task<User?> GetUserByIdAsync(int userId);
         Task<User?> GetUserByEmailAsync(string email);
-        Task<IEnumerable<User>> GetAllAsync();
-
+        Task<IEnumerable<UserResponseDto>> GetAllAsync();
+        Task<bool> DeleteMultipleAsync(List<int> userIds);
         Task AddAsync(User user);
         Task CreateAsync(RegisterDto user);
         Task<bool> UpdateAsync(UpdateDto user);
-        Task<bool> DeleteAsync(int userId);
+        Task<bool> DeleteAsync(int userId ,int LoggedId);
         Task SaveAsync();
 
 

@@ -8,9 +8,10 @@ namespace RoleBase.Repositories.Interface
         Task<IEnumerable<Permission>> GetByIdAsync(int id);
         Task<Permission> GetByNameAsync(string name);
         Task AddAsync(Permission permission);
+        Task<List<Permission>> GetPermissionsByUserIdAsync(int userId);
         Task DeleteAsync(Permission permission);
         Task AssignPermissionToRoleAsync(int UserId, int PermissionId);
-        Task<List<string>> GetPermissionsByUserIdAsync(int UserId);
+
         Task SaveAsync();
     }
 }

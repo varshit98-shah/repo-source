@@ -6,6 +6,7 @@ using RoleBase.Model;
 using RoleBase.Repositories;
 using RoleBase.Repositories.Interface;
 using RoleBase.Repositories.RepoImplementations;
+using System.Security.Claims;
 
 namespace RoleBase.Controllers
 {
@@ -43,7 +44,11 @@ namespace RoleBase.Controllers
        // [RequirePermission("Delete")]
         public async Task<IActionResult> Delete(int id)
         {
-            var result =  await _userRepository.DeleteAsync(id);
+
+            var loggedInUserId = int.Parse(
+                User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+            var result = await _userRepository.DeleteAsync(id, loggedInUserId);
+
 
             if (!result)
             {
@@ -59,6 +64,19 @@ namespace RoleBase.Controllers
         {
             await _userRepository.UpdateAsync(user);
             return Ok();
+        }
+        [HttpDelete("multiple-delete")]
+        public async Task<IActionResult> DeleteMultiple([FromBody] DeleteUsersDto dto)
+        {
+            var result = await _userRepository
+                .DeleteMultipleAsync(dto.UserIds);
+
+            if (!result)
+            {
+                return NotFound("No users found.");
+            }
+
+            return Ok("Users deleted successfully.");
         }
     }
 }

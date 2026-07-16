@@ -188,5 +188,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoleBase.Controllers.UserController",
+    "Method": "DeleteMultiple",
+    "RelativePath": "api/User/multiple-delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RoleBase.DTOs.DeleteUsersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

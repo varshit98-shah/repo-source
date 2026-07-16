@@ -15,7 +15,7 @@ namespace RoleBase.Data
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Permission> Permissions { get; set; }
 
-        public DbSet<ApiPermission> ApiPermissions { get; set; }
+       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
                // base is mainly used for call the default methads which are contains in a Dbcontext 
@@ -53,10 +53,7 @@ namespace RoleBase.Data
                 .WithMany(r => r.RolePermission)
                 .HasForeignKey(rp => rp.RoleId);
 
-            modelBuilder.Entity<ApiPermission>()
-                .HasOne(a => a.Permission)
-                .WithMany()
-                .HasForeignKey(a => a.PermissionId);
+            
 
         }
     }
